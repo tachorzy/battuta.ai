@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://i.imgur.com/ruN9Mfe.png" height="250" width="50"></img>
+    <img src="https://i.imgur.com/ruN9Mfe.png" height="250" width="500"></img>
     <h1 align="center">Battuta.ai</h1>
     <!-- <h3 align="center"><a href="https://www.gibraltr.com" target="_blank">Gibraltr.com</a></h3> -->
 </div>

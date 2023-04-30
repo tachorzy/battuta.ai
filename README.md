@@ -12,4 +12,3 @@
 
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-![OpenAI](https://a11ybadges.com/badge?logo=openai)

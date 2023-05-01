@@ -10,12 +10,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const api = new OpenAIApi(config);
 
-    const result = await api.createCompletion({
-      model: "text-davinci-003",
-      prompt: "What is the meaning of life?"
+    const result = await api.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages: [{"role": "user", "content": "Can you explain the benefits of using Typescript over something like Javascript for Web Development?"}],
     });
     
-    res.status(200).json({ data: result.data.choices[0].text })
+    res.status(200).json({ data: result.data.choices[0].message?.content })
   } else{
     res.status(405).json({ message: 'Method not allowed' })
   }

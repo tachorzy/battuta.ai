@@ -3,6 +3,19 @@
     <h1 align="center">Battuta.ai</h1>
     <!-- <h3 align="center"><a href="https://www.gibraltr.com" target="_blank">Gibraltr.com</a></h3> -->
 </div>
+### Installation & Startup
+Install all packages with:
+
+`npm install`
+
+Create an .env file with a valid OpenAI API key:
+
+```
+OPEN_API_KEY = 'YOUR_KEY_GOES_HERE'
+```
+
+To run the development server with npm do:
+`npm run dev`
 
 ### Technologies:
 

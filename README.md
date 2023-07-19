@@ -4,6 +4,21 @@
     <!-- <h3 align="center"><a href="https://www.gibraltr.com" target="_blank">Gibraltr.com</a></h3> -->
 </div>
 
+### Installation & Startup
+
+Install all packages with:
+
+`npm install`
+
+Create an .env file with a valid OpenAI API key:
+
+```
+OPEN_API_KEY = 'YOUR_KEY_GOES_HERE'
+```
+
+To run the development server with npm do:
+`npm run dev`
+
 ### Technologies:
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)

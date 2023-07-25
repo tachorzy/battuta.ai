@@ -1,8 +1,10 @@
+import SearchBar from "../components/SearchBar";
 
 export default function Home() {
   return (
-    <main className="">
-      <h1 className="">Hello World</h1>
+    <main className="bg-medina-100 h-screen pl-24 py-24">
+      <h1 className={"text-zellige-800 text-4xl py-12"}>Battuta</h1>
+      <SearchBar />
     </main>
   )
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Draggable, {DraggableCore} from "react-draggable";
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { satoshiMedium } from '../utils/localFonts';
@@ -30,12 +31,14 @@ const SearchBar = () => {
                 }}
                 renderInput={(params) => <TextField {...params} label="Choose your path" />}
             />
-            <div className="flex flex-col gap-y-4 w-1/3 h-1/6">
+            <div className="flex flex-col gap-y-4 w-1/3 relative">
                 {destinations.map((destination) => {
                     return(
-                        <h1 className="rounded-md p-4 bg-medina-400 text-lg text-medina-950">
-                            {destination}
-                        </h1>
+                        <Draggable axis="y" bounds="parent">
+                            <h1 className="rounded-md p-4 bg-medina-400 text-lg text-medina-950">
+                                {destination}
+                            </h1>
+                        </Draggable>
                     )
                 })}
             </div>

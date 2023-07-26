@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import Draggable, {DraggableCore} from "react-draggable";
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { satoshiMedium } from '../utils/localFonts';
@@ -12,36 +11,34 @@ const TEST_CITIES = ['Islamabad', 'Lahore', 'Skardu', 'Karachi', 'Peshawar', 'Sw
 const SearchBar = () => {
     // hooks 
     const [destinations, setDestinations] = useState([''])
-    const [startingCity, setStartingCity] = useState('')
+    const [startingCity, setStartingCity] = useState<string | null>("")
 
     return(
-        <div className="flex flex-col gap-y-8">
+        <div className="flex flex-row">
+            <Autocomplete
+                disablePortal
+                id="travel-combo-box"
+                options={TEST_CITIES}
+                className={satoshiMedium.className + " lg:w-1/6"}
+                onChange={(event, startCity) => {
+                    setStartingCity(startCity)
+                }}
+                renderInput={(params) => <TextField {...params} label="Select starting point" />}
+            />
             <Autocomplete
                 multiple
                 disablePortal
                 id="travel-combo-box"
-                options={TEST_CITIES}
-                className={satoshiMedium.className + " w-1/3"}
+                options={TEST_CITIES.filter(destinationOption => destinationOption !== startingCity)}
+                className={satoshiMedium.className + " lg:w-1/3"}
                 onChange={(event, newDestinations) => {
                     setDestinations(newDestinations)
                 }}
                 onInputChange={(event, newDestination) => {
-                setDestinations([...destinations, newDestination])
-                setStartingCity(destinations[0])
+                    setDestinations([...destinations, newDestination])
                 }}
-                renderInput={(params) => <TextField {...params} label="Choose your path" />}
+                renderInput={(params) => <TextField {...params} label="Add Destinations" />}
             />
-            <div className="flex flex-col gap-y-4 w-1/3 relative">
-                {destinations.map((destination) => {
-                    return(
-                        <Draggable axis="y" bounds="parent">
-                            <h1 className="rounded-md p-4 bg-medina-400 text-lg text-medina-950">
-                                {destination}
-                            </h1>
-                        </Draggable>
-                    )
-                })}
-            </div>
         </div>
 
     )

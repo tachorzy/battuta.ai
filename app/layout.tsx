@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={satoshi.className + ""}>
+      <body className={satoshi.className + " selection:bg-zellige-50"}>
         {children}
       </body>
     </html>

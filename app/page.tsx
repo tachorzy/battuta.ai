@@ -1,5 +1,5 @@
-import SearchBar from "../components/SearchBar";
-import { satoshi, satoshiMedium, satoshiBold } from '../utils/localFonts';
+import SearchBar from "@/components/SearchBar";
+import { satoshi, satoshiMedium, satoshiBold } from '@/utils/localFonts';
 
 export default function Home() {
   return (

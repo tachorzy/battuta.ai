@@ -9,7 +9,6 @@ import { satoshiMedium } from '../utils/localFonts';
 const TEST_CITIES = ['Islamabad', 'Lahore', 'Skardu', 'Karachi', 'Peshawar', 'Swat', 'Hunza Valley']
 
 const SearchBar = () => {
-    // hooks 
     const [destinations, setDestinations] = useState([''])
     const [startingCity, setStartingCity] = useState<string | null>("")
 
@@ -19,7 +18,7 @@ const SearchBar = () => {
                 disablePortal
                 id="travel-combo-box"
                 options={TEST_CITIES}
-                className={satoshiMedium.className + " lg:w-1/6"}
+                className={satoshiMedium.className + " lg:w-[20%] peer-open:"}
                 onChange={(event, startCity) => {
                     setStartingCity(startCity)
                 }}
@@ -40,7 +39,6 @@ const SearchBar = () => {
                 renderInput={(params) => <TextField {...params} label="Add Destinations" />}
             />
         </div>
-
     )
 
 

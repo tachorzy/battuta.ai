@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // teal color
         'zellige-50':'#bcdfd1',
         'zellige-100':'#b7dccd',
         'zellige-200':'#93cbb4',
@@ -19,7 +20,9 @@ module.exports = {
         'zellige-800':'#678979',
         'zellige-900':'#5b786a',
         'zellige-950':'#34453d',
-
+        // tan color
+        'medina-50': '#fdfbf8',
+        'medina-100': '#fbf7f0',
         'medina-200':'#f6eee0',
         'medina-300':'#f2e8d5',
         'medina-400':'#e6ddcb',

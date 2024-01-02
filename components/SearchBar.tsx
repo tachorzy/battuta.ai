@@ -4,15 +4,13 @@ import React, { useState } from 'react';
 import { useLoadScript, Autocomplete } from '@react-google-maps/api';
 
 import { satoshiMedium } from '../utils/localFonts';
-// will replace later with whatever API we use, and eventually the Google Places API.
-const TEST_CITIES = ['Islamabad', 'Lahore', 'Skardu', 'Karachi', 'Peshawar', 'Swat', 'Hunza Valley']
 
 const SearchBar = () => {
     const [destinations, setDestinations] = useState([''])
     const [startingCity, setStartingCity] = useState<string | null>("")
 
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: process.env.GOOGLE_MAPS_PLACES_API_KEY || '',
+        googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY || '',
         libraries: ['places'],
     });
 
@@ -26,13 +24,12 @@ const SearchBar = () => {
                     <input
                         type="text"
                         placeholder="Starting City"
-                        className={satoshiMedium.className + " bg-transparent border-b border-gray-300 focus:outline-none focus:border-gray-500"}
+                        className={satoshiMedium.className + " bg-transparent border-b border-gray-300 focus:outline-none focus:border-gray-50 text-zellige-700"}
                     /> 
                 </Autocomplete>
                 :
                 <p>Google did not load...</p>
             }
-
         </div>
     )
 

@@ -1,5 +1,6 @@
 import './globals.css'
-// import { satoshi } from '@/util/localFonts';
+import { satoshi } from '@/utils/localFonts';
+import NavLogo from "@/components/NavLogo";
 
 export const metadata = {
   title: 'Battuta.ai',
@@ -13,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={""}>
+      <body className={satoshi.className + " selection:bg-zellige-50"}>
         {children}
       </body>
     </html>
